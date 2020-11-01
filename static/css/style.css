@@ -1,0 +1,22 @@
+header a {	
+  text-decoration: none;
+  color: #242a31;
+}
+
+body {
+  width:800px;
+  margin:0 auto;
+  color: #333;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  color: #242a31;
+}
+
+div.content h1 {
+  border-bottom: 2px solid #E6ECF1;
+}
+
+hr {
+	border-top: 2px solid #E6ECF1;
+}
