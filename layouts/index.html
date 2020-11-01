@@ -1,0 +1,17 @@
+{{ define "main" }}
+  <div>
+    {{ $pag := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections) }}
+    {{ range $pag.Pages }}
+    <p><a href="{{ .Permalink }}">{{ .Title }}</a></p>
+    {{ end }}
+  </div>
+
+  {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+    {{ if .Paginator.HasPrev }}
+        <p><a href="{{ .Permalink }}page/{{ .Paginator.Prev.PageNumber }}/">New Posts</a></p>
+    {{ end }}
+    {{ if .Paginator.HasNext }}
+        <p><a href="{{ .Permalink }}page/{{ .Paginator.Next.PageNumber }}/">Old Posts</a></p>
+    {{ end }}
+  {{ end }}
+{{ end }}
