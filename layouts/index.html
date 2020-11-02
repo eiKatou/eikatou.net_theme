@@ -1,5 +1,11 @@
 {{ define "main" }}
 <main>
+  <div>
+    <h1>{{ .Site.Title }}</h1>
+    {{ with .Params.subtitle }}
+      <span class="subtitle">{{ . }}</span>
+    {{ end }}
+  </div>
   <!-- recent posts -->
   <div>
     <ul>
@@ -35,9 +41,5 @@
     <a href="/tags/">tags</a>
   </div>
 
-  <!-- about -->
-  <div>
-    <a href="/page/about/">about</a>
-  </div>
 </main>
 {{ end }}
