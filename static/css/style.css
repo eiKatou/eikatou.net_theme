@@ -1,16 +1,3 @@
-.footer a {	
-  text-decoration: none;
-  font-weight: bold;
-  color: #505050;
-}
-.footer_hugo {
-  font-size: small;
-}
-.footer_hugo a {
-  text-decoration: none;
-  color: #242a31;
-}
-
 body {
   width:800px;
   margin:0 auto;
@@ -29,6 +16,22 @@ div.content h1 {
   border-bottom: 2px solid #E6ECF1;
 }
 
-hr {
+/* footer */
+footer {
+  padding-top: 20px;
+}
+footer hr {
 	border-top: 2px solid #E6ECF1;
+}
+.footer a {	
+  text-decoration: none;
+  font-weight: bold;
+  color: #505050;
+}
+.footer_hugo {
+  font-size: small;
+}
+.footer_hugo a {
+  text-decoration: none;
+  color: #242a31;
 }
