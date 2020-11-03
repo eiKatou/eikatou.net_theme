@@ -23,22 +23,23 @@
   <div>
     {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
       {{ if .Paginator.HasPrev }}
-        <a href="{{ .Permalink }}page/{{ .Paginator.Prev.PageNumber }}/">newer</a>
+        <a href="{{ .Permalink }}page/{{ .Paginator.Prev.PageNumber }}/">&larr; {{ i18n "newer" }}</a>&nbsp;&nbsp;
       {{ end }}
       {{ if .Paginator.HasNext }}
-        <a href="{{ .Permalink }}page/{{ .Paginator.Next.PageNumber }}/">older</a>
+        <a href="{{ .Permalink }}page/{{ .Paginator.Next.PageNumber }}/">{{ i18n "older" }} &rarr;</a>
       {{ end }}
     {{ end }}
   </div>
 
+  <div><br/></div>
   <!-- all posts -->
   <div>
-    <a href="/post/">posts</a>
+    <a href="/post/">{{ i18n "posts" }}</a>
   </div>
 
   <!-- all tags -->
   <div>
-    <a href="/tags/">tags</a>
+    <a href="/tags/">{{ i18n "tags" }}</a>
   </div>
 
 </main>
