@@ -16,6 +16,10 @@ div.content h1 {
   border-bottom: 2px solid #E6ECF1;
 }
 
+pre.chroma {  
+  padding: 15px;
+}
+
 /* footer */
 footer {
   padding-top: 20px;
