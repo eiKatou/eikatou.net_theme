@@ -12,8 +12,25 @@ h1,h2,h3,h4,h5,h6 {
   color: #242a31;
 }
 
+.top-titile {
+  margin-top: 30px;
+}
+.page-titile {
+  margin-top: 30px;
+}
+.page-tags {
+  margin-left: 10px;
+  margin-bottom: 50px;
+}
+.page-tags a{
+  text-decoration: none;
+  font-weight: bold;
+  color: #505050;
+  margin-right: 10px;
+}
 div.content h1 {
   border-bottom: 2px solid #E6ECF1;
+  margin-top: 50px;
 }
 
 pre.chroma {  

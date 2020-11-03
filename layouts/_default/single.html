@@ -1,12 +1,14 @@
 {{ define "main" }}
 <main>
   <!--title-->
-  <h1>{{.Title}}</h1>
+  <div class="page-titile">
+    <h1>{{.Title}}</h1>
+</div>
   <!--tags-->
   {{ if .Params.tags }}
-  <div class="blog-tags">
+  <div class="page-tags">
     {{ range .Params.tags }}
-      <a href="/tags/{{ . | urlize }}">{{ . }}</a>&nbsp;
+      <a href="/tags/{{ . | urlize }}">#{{ . }}</a>
     {{ end }}
   </div>
   {{ end }}
