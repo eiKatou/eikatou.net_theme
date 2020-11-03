@@ -40,6 +40,9 @@ div.content h1 {
   margin-top: 50px;
 }
 
+pre {
+  overflow-x:scroll;
+}
 pre.chroma {  
   padding: 15px;
 }
