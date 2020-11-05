@@ -1,4 +1,11 @@
 <footer>
+    {{ if not .IsHome }}
+    <!--TODO:divいるの？, Topって分かる？-->
+    <div style="width: 100%;">
+      <div class="right"><a href="/">Top</a></div><div class="clear"></div>
+    </div>
+    {{ end }}
+    
     <hr/>
     <p class="footer">
       © {{ .Site.Params.since }} - {{ .Site.LastChange.Format "2006" }} <a href="/page/about/">eiKatou</a> / <a href="/">{{ .Site.Title }}</a>
