@@ -1,14 +1,14 @@
 {{ define "main" }}
 <main>
-  <h1>{{.Title}}</h1>
+  <!--title-->
+  <div class="page-titile">
+    <h1>{{.Title}}</h1>
+  </div>
+
+  <!--tags-->
   <ul>
     {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-      <li><a href="/tags/{{ $name | urlize }}">{{ $name }}</a></li>
-      <!-- <ul>
-          {{ range $taxonomy.Pages }}
-          <li hugo-nav="{{ .RelPermalink}}">{{.Date.Format "2006-01-02"}} <a href="{{ .Permalink}}"> {{ .LinkTitle }} </a> </li>
-          {{ end }}
-      </ul> -->
+      <li style="margin-bottom: 3px;"><a href="/tags/{{ $name | urlize }}">{{ $name }}</a></li>
     {{ end }}
   </ul>
 </main>
