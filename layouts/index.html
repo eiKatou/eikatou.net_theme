@@ -6,32 +6,39 @@
       <span class="subtitle">{{ . }}</span>
     {{ end }}
   </div>
+
   <!-- recent posts -->
   <div>
-    <ul>
-    <!-- Ranges through content/posts/*.md -->
     {{ $pag := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections) }}
     {{ range $pag.Pages }}
-        <li>
-          {{.Date.Format "2006-01-02"}} <a href="{{.Permalink}}">{{.Title}}</a>
-        </li>
-    {{ end }}
-    </ul>
-  </div>
-
-  <!-- older/newer -->
-  <div>
-    {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
-      {{ if .Paginator.HasPrev }}
-        <a href="{{ .Permalink }}page/{{ .Paginator.Prev.PageNumber }}/">&larr; {{ i18n "newer" }}</a>&nbsp;&nbsp;
-      {{ end }}
-      {{ if .Paginator.HasNext }}
-        <a href="{{ .Permalink }}page/{{ .Paginator.Next.PageNumber }}/">{{ i18n "older" }} &rarr;</a>
-      {{ end }}
+    <div class="list-row">
+      <div class="list-row-date">{{.Date.Format "2006-01-02"}}</div>
+      <div><a href="{{.Permalink}}">{{.Title}}</a></div>
+    </div>
     {{ end }}
   </div>
 
   <div><br/></div>
+
+  <!-- older/newer -->
+  <div class="older-newer">
+    {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+      {{ if .Paginator.HasPrev }}
+      <div class="left">
+        <a href="{{ .Permalink }}page/{{ .Paginator.Prev.PageNumber }}/">&larr; {{ i18n "newer" }}</a>
+      </div>
+      {{ end }}
+      {{ if .Paginator.HasNext }}
+      <div class="right">
+        <a href="{{ .Permalink }}page/{{ .Paginator.Next.PageNumber }}/">{{ i18n "older" }} &rarr;</a>
+      </div>
+      {{ end }}
+    {{ end }}
+    <div class="clear"></div>
+  </div>
+
+  <div><br/></div>
+
   <!-- all posts -->
   <div>
     <a href="/post/">{{ i18n "posts" }}</a>
