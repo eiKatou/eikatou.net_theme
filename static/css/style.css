@@ -84,15 +84,27 @@ footer {
 footer hr {
 	border-top: 2px solid #E6ECF1;
 }
-.footer a {
+.footer_title {
+  margin-bottom: 15px;
+  font-size: large;
+}
+.footer_title a {
   text-decoration: none;
   font-weight: bold;
   color: #505050;
 }
-.footer_hugo {
+.footer_copyright {
   font-size: small;
 }
-.footer_hugo a {
+.footer_copyright a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #505050;
+}
+.footer_last {
+  font-size: small;
+}
+.footer_last a {
   text-decoration: none;
   color: #242a31;
 }
