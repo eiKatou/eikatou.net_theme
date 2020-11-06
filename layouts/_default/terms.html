@@ -5,11 +5,22 @@
     <h1>{{.Title}}</h1>
   </div>
 
+  <!--archives-->
+  {{ if eq .Title "Archives"}}
+  <ul>
+    {{ range $name, $taxonomy := .Site.Taxonomies.archives }}
+      <li style="margin-bottom: 3px;"><a href="/archives/{{ $name | urlize }}">{{ $name }}</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+
   <!--tags-->
+  {{ if eq .Title "Tags"}}
   <ul>
     {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
       <li style="margin-bottom: 3px;"><a href="/tags/{{ $name | urlize }}">{{ $name }}</a></li>
     {{ end }}
   </ul>
+  {{ end }}
 </main>
 {{ end }}
