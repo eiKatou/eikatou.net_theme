@@ -78,6 +78,8 @@ blockquote{
   border-left:3px solid #26AA8B;
   padding-left:10px;
   background-color: #F5F7F9;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 blockquote:before{
   position:absolute;
@@ -88,7 +90,7 @@ blockquote:before{
 blockquote p{
   position:relative;
   /* padding-left:30px; */
-  padding: 20px 20px 20px 30px;
+  padding: 20px 30px 20px 30px;
 }
 blockquote cite{
   display: block;
