@@ -73,6 +73,29 @@ div.content h1 {
   border-bottom: 2px solid #E6ECF1;
   margin-top: 50px;
 }
+blockquote{
+  position:relative;
+  border-left:3px solid #26AA8B;
+  padding-left:10px;
+  background-color: #F5F7F9;
+}
+blockquote:before{
+  position:absolute;
+  content:'“';
+  font-size: 20px;
+  color:#26AA8B;
+}
+blockquote p{
+  position:relative;
+  /* padding-left:30px; */
+  padding: 20px 20px 20px 30px;
+}
+blockquote cite{
+  display: block;
+  font-size:0.8rem;
+  color:#F8C8B2;
+  text-align:right;
+}
 
 /* pre code */
 pre {
