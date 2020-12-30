@@ -69,6 +69,13 @@ h1,h2,h3,h4,h5,h6 {
   color: #505050;
   margin-right: 10px;
 }
+.page-date {
+  font-size: x-small;
+  color: #707070;
+  text-align: right;
+  margin-top: 10px;
+  margin-bottom: -10px;
+}
 div.content h1 {
   border-bottom: 2px solid #E6ECF1;
   margin-top: 50px;
