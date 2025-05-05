@@ -135,3 +135,60 @@ footer hr {
   text-decoration: none;
   color: #242a31;
 }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #111;
+    color: #eee;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: #eee;
+  }
+  .page-tags a, .footer_title a, .footer_copyright a, .footer_last a {
+    color: #aaa;
+  }
+  .list-row-date, .page-date {
+    color: #aaa;
+  }
+  div.content h1 {
+    border-bottom: 2px solid #333;
+  }
+  blockquote {
+    background-color: #333;
+    border-left: 3px solid #555;
+  }
+  blockquote cite {
+    color: #888;
+  }
+  footer hr {
+    border-top: 2px solid #333;
+  }
+  a {
+    color: #58A6FF;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  /* コードブロックの背景色 */
+  pre {
+    background-color: #303030; /* 濃いめの灰色 */
+    color: #e0e0e0; /* コードのテキスト色（例: 薄い灰色や白に近い色） */
+    padding: 1em; /* 内側の余白 */
+    overflow-x: auto; /* 内容が長い場合にスクロールバーを表示 */
+    border-radius: 5px; /* 角を丸くする */
+  }
+
+  /* インラインコードの背景色（必要であれば） */
+  code {
+    background-color: #404040; /* コードブロックより少し明るいか暗い色 */
+    padding: 0.2em 0.4em; /* 内側の余白 */
+    border-radius: 3px; /* 角を丸くする */
+  }
+
+  /* pre要素の中のcode要素にスタイルを適用する場合 */
+  pre code {
+    background-color: transparent; /* preに背景色を付ける場合はcodeの背景色は透明にする */
+    color: inherit; /* preから色を継承 */
+    padding: 0; /* preにpaddingがある場合はcodeのpaddingは0にする */
+  }
+}
